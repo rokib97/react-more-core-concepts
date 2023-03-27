@@ -14,8 +14,8 @@ const Select = () => {
         onChange={handleChnage}
         className="select w-full max-w-xs"
       >
-        {person.map((p) => (
-          <option>{p}</option>
+        {person.map((singlePerson) => (
+          <option>{singlePerson}</option>
         ))}
       </select>
     </div>
