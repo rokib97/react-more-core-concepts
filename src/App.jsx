@@ -1,5 +1,5 @@
 import React from "react";
-import Select from "./components/Select/Select";
+import CustomHook from "./components/CustomHook/CustomHook";
 
 // import { About, Home } from "./components/Pages/index";
 
@@ -16,7 +16,9 @@ const App = () => {
       {/* <Example /> */}
       {/* <MultipleInput /> */}
       {/* <Checkbox /> */}
-      <Select />
+      {/* <Select /> */}
+      {/* <UseRef /> */}
+      <CustomHook />
     </div>
   );
 };
