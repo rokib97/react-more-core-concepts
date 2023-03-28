@@ -1,25 +1,36 @@
-import React from "react";
-import CustomHook from "./components/CustomHook/CustomHook";
+import React, { createContext, useState } from "react";
+import Parent from "./components/ContextApi/Parent";
 
-// import { About, Home } from "./components/Pages/index";
+export const UserContext = createContext(null);
 
 const App = () => {
+  const [user, setUser] = useState({ name: "rokib" });
+  const logOut = () => {
+    setUser(null);
+  };
+  const logIn = () => {
+    setUser({ name: "rokib" });
+  };
+  console.log(user);
   return (
-    <div>
-      {/* <ShortCurcuit /> */}
-      {/* <Toggle /> */}
-      {/* <ToggleUSer /> */}
-      {/* <Cleanup /> */}
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <ControlledInput /> */}
-      {/* <Example /> */}
-      {/* <MultipleInput /> */}
-      {/* <Checkbox /> */}
-      {/* <Select /> */}
-      {/* <UseRef /> */}
-      <CustomHook />
-    </div>
+    <UserContext.Provider value={{ user, logOut, logIn }}>
+      <div>
+        {/* <ShortCurcuit /> */}
+        {/* <Toggle /> */}
+        {/* <ToggleUSer /> */}
+        {/* <Cleanup /> */}
+        {/* <Home /> */}
+        {/* <About /> */}
+        {/* <ControlledInput /> */}
+        {/* <Example /> */}
+        {/* <MultipleInput /> */}
+        {/* <Checkbox /> */}
+        {/* <Select /> */}
+        {/* <UseRef /> */}
+        {/* <CustomHook /> */}
+        <Parent />
+      </div>
+    </UserContext.Provider>
   );
 };
 
