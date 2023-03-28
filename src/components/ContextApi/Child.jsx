@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
-import { UserContext } from "../../App";
+import React from "react";
+import useAppContextHook from "./useContextHook";
 
 const Child = () => {
-  const { user, logOut, logIn } = useContext(UserContext);
-  console.log(user);
+  const { user, logOut, logIn } = useAppContextHook();
+
   return (
     <div>
       {user && (
