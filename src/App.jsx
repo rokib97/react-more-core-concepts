@@ -1,5 +1,5 @@
 import React from "react";
-import GrandParent from "./components/ContextApi/GrandParent";
+import CustomHook from "./components/CustomHook/CustomHook";
 
 const App = () => {
   return (
@@ -16,8 +16,8 @@ const App = () => {
       {/* <Checkbox /> */}
       {/* <Select /> */}
       {/* <UseRef /> */}
-      {/* <CustomHook /> */}
-      <GrandParent />
+      <CustomHook />
+      {/* <GrandParent /> */}
     </div>
   );
 };

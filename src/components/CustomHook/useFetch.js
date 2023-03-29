@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useGithubUser = (url) => {
+const useFetch = (url) => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -28,4 +28,4 @@ const useGithubUser = (url) => {
   return { data, isLoading, error };
 };
 
-export default useGithubUser;
+export default useFetch;

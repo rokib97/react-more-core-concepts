@@ -1,15 +1,8 @@
 import React from "react";
-import useGithubUser from "./useGithubUser";
-import useToggle from "./useToggle";
+import { useGlobalContext } from "../GlobalContext/GlobalContext";
 
 const CustomHook = () => {
-  const { show, toggle } = useToggle(false);
-  const {
-    data: value,
-    isLoading,
-    error,
-  } = useGithubUser(`https://api.github.com/users/rokib97`);
-
+  const { show, value, toggle, isLoading, error } = useGlobalContext();
   if (isLoading) {
     return <p>Loading.....</p>;
   }
