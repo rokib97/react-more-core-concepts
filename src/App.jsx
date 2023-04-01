@@ -1,5 +1,5 @@
 import React from "react";
-import CustomHook from "./components/CustomHook/CustomHook";
+import UseReducer from "./components/ReducerBasic/UseReducer";
 
 const App = () => {
   return (
@@ -16,8 +16,9 @@ const App = () => {
       {/* <Checkbox /> */}
       {/* <Select /> */}
       {/* <UseRef /> */}
-      <CustomHook />
+      {/* <CustomHook /> */}
       {/* <GrandParent /> */}
+      <UseReducer />
     </div>
   );
 };

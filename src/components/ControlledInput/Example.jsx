@@ -45,7 +45,6 @@ const Example = () => {
         <button type="submit" className="btn btn-outline btn-error btn-xs">
           Add User
         </button>
-        {error && <p>Something Went Wrong....</p>}
       </form>
       <div className="text-center">
         {user.map((singleUSer) => (
