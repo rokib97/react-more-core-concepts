@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { guns } from "../../../data";
 const UseReducer = () => {
   const [people, setPeople] = useState(guns);
-  console.log(people);
+
   const handleDelete = (id) => {
     setPeople(people.filter((p) => p.id !== id));
   };

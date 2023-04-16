@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 const Cleanup = () => {
-  console.log("render");
   const [toggle, setToggle] = useState(false);
+  console.log("render");
   return (
     <div>
-      <h1>Cleanup</h1>
-      <button onClick={() => setToggle(!toggle)}>Toggle</button>
+      <h1 className="text-center text-4xl my-6">useEffect Cleanup Function</h1>
+      <div className="text-center">
+        <button className="btn btn-primary " onClick={() => setToggle(!toggle)}>
+          Toggle
+        </button>
+      </div>
       {toggle && <Example />}
     </div>
   );
@@ -14,17 +18,16 @@ const Cleanup = () => {
 
 const Example = () => {
   useEffect(() => {
-    console.log("this is fun");
     const id = setInterval(() => {
-      console.log("hello from interval");
+      console.log("Inside interval");
     }, 1000);
 
     return () => {
       clearInterval(id);
-      console.log("cleanup");
+      console.log("cleaned up");
     };
   }, []);
-  return <h1>Hello There</h1>;
+  return <h1 className="text-center text-3xl my-4">Hello There</h1>;
 };
 
 export default Cleanup;

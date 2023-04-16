@@ -1,5 +1,5 @@
 import React from "react";
-import UseReducer from "./components/ReducerBasic/UseReducer";
+import Cleanup from "./components/Cleanup/Cleanup";
 
 const App = () => {
   return (
@@ -7,7 +7,6 @@ const App = () => {
       {/* <ShortCurcuit /> */}
       {/* <Toggle /> */}
       {/* <ToggleUSer /> */}
-      {/* <Cleanup /> */}
       {/* <Home /> */}
       {/* <About /> */}
       {/* <ControlledInput /> */}
@@ -18,7 +17,8 @@ const App = () => {
       {/* <UseRef /> */}
       {/* <CustomHook /> */}
       {/* <GrandParent /> */}
-      <UseReducer />
+      {/* <UseReducer /> */}
+      <Cleanup />
     </div>
   );
 };
